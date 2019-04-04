@@ -4,12 +4,14 @@ const timestamps = require('mongoose-timestamp');
 const mongooseHidden = require('mongoose-hidden');
 
 const establishmentSchema = new Schema({
-    zomatoId: {type: Number,
-    required: 'Establishment id is mandatory',
-    unique: true
+    zomatoId: {
+        type: Number,
+        required: 'Establishment id is mandatory',
+        unique: true
     },
-    name: {type: String,
-    required: 'Establishment name is mandatory'
+    name: {
+        type: String,
+        required: 'Establishment name is mandatory'
     }
 });
 

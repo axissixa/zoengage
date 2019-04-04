@@ -6,19 +6,22 @@ const mongooseHidden = require('mongoose-hidden');
 const reviewSchema = new Schema({
     zomatoId: {
         type: Number,
+        index : true,
         required: 'restaurant id is mandatory',
         unique: true
     },
-    uder_id: {
+    userId: {
         type: Number,
         required: 'logged in user is required',
     },
-    user_rating: {
+    userRating: {
         type: Number,
+        enum: [1,2,3,4,5],
         required: 'rate the restraunt from 0-10'
     },
     content: {
         type: String,
+        default: null
     }
 });
 
