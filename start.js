@@ -7,9 +7,7 @@ mongoose.connection.on('error',(err) => {
     console.error(`Database Error -> ${err.message}`);
 });
 
-require('./models/Category');
-require('./models/Cuisine');
-require('./models/Establishment');
+
 const app = require('./application');
 
 app.set('port', process.env.PORT || 8081);

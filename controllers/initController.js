@@ -60,3 +60,5 @@ exports.addCuisines = (req, res) => {
     })
 
 }
+
+
