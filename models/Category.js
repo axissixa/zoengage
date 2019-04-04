@@ -14,18 +14,20 @@ const Schema = mongoose.Schema;
 const timestamps = require('mongoose-timestamp');
 const mongooseHidden = require('mongoose-hidden');
 
-const EstablishmentSchema = new Schema({
-    zomatoId: {type: Number,
-    required: 'Establishment id is mandatory',
-    unique: true
+const categorySchema = new Schema({
+    zomatoId: {
+        type: Number,
+        required: 'category id is mandatory',
+        unique: true
     },
-    name: {type: String,
-    required: 'Establishment name is mandatory'
+    name: {
+        type: String,
+        required: 'category name is mandatory'
     }
 });
 
-EstablishmentSchema.plugin(timestamps);
-EstablishmentSchema.plugin(mongooseHidden,{ hidden: {createdAt: true,updatedAt :true,}});
+categorySchema.plugin(timestamps);
+categorySchema.plugin(mongooseHidden,{ hidden: {createdAt: true,updatedAt :true,}});
 
-const Establishment = mongoose.model('categories', EstablishmentSchema,'categories');
-module.exports = Establishment;
+const Category = mongoose.model('categories', categorySchema,'categories');
+module.exports = Category;

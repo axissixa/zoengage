@@ -60,3 +60,17 @@ exports.getLocation = (req, res) => {
     })
 };
 
+exports.getRestaurant = (req, res) => {
+    const restaurantId = req.query.restaurantId||"";
+    if(!restaurantId){
+        return responseHandler.getResponse(200,"restaurantId is mandatory",{},res);
+    }
+    client.getRestaurant({res_id : restaurantId}, function(err, result){
+        if(!err){
+            return responseHandler.getResponse(200, "", result, res);
+        }else{
+            console.log(err);
+            return responseHandler.getResponse(200, "", {}, res);
+        }
+    })
+}

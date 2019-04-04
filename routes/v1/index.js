@@ -9,5 +9,8 @@ router.get('/addEstablishments' , initController.addEstablishments);
 router.get('/addCuisines' , initController.addCuisines);
 router.get('/searchRestaurants', zomatoController.searchRests);
 router.get('/getlocation', zomatoController.getLocation)
+router.get('/getRestaurant', zomatoController.getRestaurant);
+router.get('/getReviews', );
+router.post('/postReview', )
 
 module.exports = router;

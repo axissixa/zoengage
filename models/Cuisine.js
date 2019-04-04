@@ -4,12 +4,14 @@ const timestamps = require('mongoose-timestamp');
 const mongooseHidden = require('mongoose-hidden');
 
 const cuisineSchema = new Schema({
-    zomatoId: {type: Number,
-    required: 'cuisine id is mandatory',
-    unique: true
+    zomatoId: {
+        type: Number,
+        required: 'cuisine id is mandatory',
+        unique: true
     },
-    name: {type: String,
-    required: 'cuisine name is mandatory'
+    name: {
+        type: String,
+        required: 'cuisine name is mandatory'
     }
 });
 
