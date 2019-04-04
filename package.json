@@ -24,11 +24,12 @@
     "express-sessions": "^1.0.6",
     "moment": "^2.24.0",
     "mongoose": "^5.4.14",
-    "mongoose-hidden": "^1.6.0",
+    "mongoose-hidden": "^1.6.1",
     "mongoose-timestamp": "^0.6.0",
     "morgan": "^1.9.1",
     "newrelic": "^5.5.0",
     "passport": "^0.4.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "zomato": "^1.1.0"
   }
 }
