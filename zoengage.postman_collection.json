@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "61edbf5f-0e59-458b-b90a-21943f65e19e",
+		"name": "zoengage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8081/v1/addCategories",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"addCategories"
+					]
+				},
+				"description": "populate db with categories from zomato api"
+			},
+			"response": []
+		},
+		{
+			"name": "addEstablishments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8081/v1/addEstablishments",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"addEstablishments"
+					]
+				},
+				"description": "add establishment types to db"
+			},
+			"response": []
+		},
+		{
+			"name": "addCuisines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8081/v1/addCuisines",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"addCuisines"
+					]
+				},
+				"description": "add cuisines to the db"
+			},
+			"response": []
+		},
+		{
+			"name": "searchRestaurants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8081/v1/searchRestaurants",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"searchRestaurants"
+					]
+				},
+				"description": "search request on the api using keyword and filters"
+			},
+			"response": []
+		},
+		{
+			"name": "getlocation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "getlocation",
+					"host": [
+						"getlocation"
+					]
+				},
+				"description": "get locality based on keyword search in city"
+			},
+			"response": []
+		},
+		{
+			"name": "getRestaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "getRestaurant",
+					"host": [
+						"getRestaurant"
+					]
+				},
+				"description": "get details about a particular restaurant using keyword or restaurant id"
+			},
+			"response": []
+		},
+		{
+			"name": "Reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8081/v1/Reviews?restaurantId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"Reviews"
+					],
+					"query": [
+						{
+							"key": "restaurantId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "get reviews stored in local db based on the restaurant id"
+			},
+			"response": []
+		},
+		{
+			"name": "(post)Reviews",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\" : 1,\n\t\"restaurantId\" : 1,\n\t\"userRating\": 5,\n\t\"reviewText\": \"hello this is a dummy\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/v1/Reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"Reviews"
+					]
+				},
+				"description": "post reviews to the db based on restaurant id"
+			},
+			"response": []
+		}
+	]
+}
