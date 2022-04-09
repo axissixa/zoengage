@@ -23,7 +23,7 @@
     "express-session": "^1.15.6",
     "express-sessions": "^1.0.6",
     "hbs": "^4.0.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.4.14",
     "mongoose-hidden": "^1.6.1",
     "mongoose-timestamp": "^0.6.0",
